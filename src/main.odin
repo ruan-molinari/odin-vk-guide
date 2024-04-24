@@ -1,8 +1,13 @@
 package main
 
+import "core:fmt"
+
 main :: proc() {
 
-  engine_init()
+  err := engine_init()
+  if err != nil {
+    fmt.println(err)
+  }
   defer engine_cleanup()
 
   engine_run()

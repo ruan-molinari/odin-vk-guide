@@ -3,16 +3,20 @@
   "collections": [
     { "name": "base", "path":   "/Users/ruan/Odin/base" },
     { "name": "core", "path":   "/Users/ruan/Odin/core" },
-    { "name": "vendor", "path": "/Users/ruan/Odin/vendor" }
+    { "name": "vendor", "path": "/Users/ruan/Odin/vendor" },
+    { "name": "libs", "path": "libs" },
+    { "name": "src", "path": "src" }
+
   ],
+	"profile": "default",
+	"profiles": [ { "name": "default", "checker_path": [""]} ],
+  "enable_format": true,
 	"enable_semantic_tokens": true,
 	"enable_document_symbols": true,
 	"enable_hover": true,
 	"enable_snippets": true,
-	"profile": "default",
-	"profiles": [
-		{ "name": "default", "checker_path": [""]},
-		{ "name": "linux_profile", "os": "linux", "checker_path": ["main.odin"]},
-		{ "name": "windows_profile", "os": "windows", "checker_path": [""]}
-	]
+  "enable_procedure_snippet": true,
+  "enable_inlay_hints": true,
+  "enable_references": true,
+  "checker_args": "-vet -strict-style"
 }
