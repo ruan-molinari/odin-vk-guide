@@ -2,15 +2,15 @@ with import <nixpkgs> {};
 
 mkShell {
   packages = [
-    glfw
+    SDL2
+    SDL2.dev
     vulkan-headers
     vulkan-loader
     vulkan-validation-layers
     vulkan-tools
   ];
 
-  nativeBuildInputs = with pkgs.buildPackages; [ 
-    glfw
+  nativeBuildInputs = with pkgs; [ 
   ];
 
   VULKAN_SDK = "${vulkan-headers}";
